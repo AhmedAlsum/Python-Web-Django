@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block jumbotron %}
+{% load staticfiles%}
+
+<style>
+    {% block style%}
+
+
+.navbar {
+
+  background-color : #000000;
+   color : #FFFFFF;
+}
+
+    .jumbotron{
+
+    background-color : #088DA5;
+    color : #FFFFFF;
+    }
+
+    {% endblock %}
+
+
+
+
+</style>
+
+<div class = 'container_fluid'>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            <!--<img src="{% static 'img/Pythonlogo.png' %}" class="img-resposive"/>-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_YmBLSHpi14" frameborder="0" allowfullscreen></iframe>
+            </div>>
+
+        <h1>Python Web</h1>
+        <p>This example is a quick exercise to illustrate how the default</p>
+        <p>
+          <a class="btn btn-lg btn-default" href="../../components/#navbar" role="button">Register &raquo;</a>
+        </p>
+      </div>
+    </div>
+    </div>
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-xs-3">
+
+
+
+<h1>{{title}}</h1>
+
+
+<form method = "Post" action ="" >{% csrf_token %}
+{{form|crispy}}
+
+<input class = "btn btn-primary" type = submit value="SignUP">
+
+</div>
+</div>
+
+
+</form>
+{% endblock %}
